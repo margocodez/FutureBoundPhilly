@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Summer Melt API",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "cwd": "${workspaceFolder}/App",
+      "python": "${workspaceFolder}/App/.venv/bin/python",
+      "args": ["--app", "run", "run", "--debug", "--no-reload", "--port", "5001"],
+      "jinja": true,
+      "justMyCode": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Atlas · Future Bound PHL{% endblock %}
+{% block content %}
+<div class="chat" id="chat">
+  <div class="msg atlas"><span class="who">Atlas</span><p>{{ greeting }}</p></div>
+  {% for line in transcript %}
+  <div class="msg {{ line.role }}">
+    {% if line.role == "atlas" %}<span class="who">Atlas</span>{% endif %}
+    <p>{{ line.text }}</p>
+  </div>
+  {% endfor %}
+</div>
+<form id="chat-form" class="chat-form" data-url="{{ url_for('interview.message') }}">
+  <input id="chat-input" type="text" placeholder="Type your answer..." autocomplete="off" maxlength="2000" required autofocus>
+  <button type="submit">Send</button>
+</form>
+<div id="calculating" class="calculating" hidden>
+  <div class="spinner"></div>
+  <p>Calculating enrollment plan...</p>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/interview.js') }}"></script>{% endblock %}

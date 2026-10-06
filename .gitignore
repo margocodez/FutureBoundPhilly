@@ -1,0 +1,4 @@
+.DS_Store
+*.zip
+# Training data stays out of git (may contain student records)
+FBP_NN/*.csv

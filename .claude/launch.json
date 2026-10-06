@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "melt-risk-app",
+      "runtimeExecutable": "App/.venv/bin/python",
+      "runtimeArgs": ["App/run.py"],
+      "env": { "PORT": "5001" },
+      "port": 5001
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+:root { --fg: #1a1a1a; --bg: #fafafa; --accent: #2b5fab; --muted: #f0f2f5; }
+body { margin: 0; font-family: system-ui, sans-serif; color: var(--fg); background: var(--bg); }
+header { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--accent); }
+header a, header span { color: #fff; text-decoration: none; font-weight: 600; }
+header .logout { display: flex; gap: 0.75rem; align-items: center; margin: 0; }
+header .logout span { font-weight: 400; }
+header .logout button { background: #fff; color: var(--accent); }
+main { max-width: 720px; margin: 0 auto; padding: 1rem; }
+button { padding: 0.6rem 1.2rem; background: var(--accent); color: #fff; border: 0; border-radius: 4px; cursor: pointer; }
+small { margin-left: 0.75rem; color: #666; }
+pre, code { font-family: ui-monospace, monospace; }
+pre { background: var(--muted); padding: 1rem; border-radius: 6px; overflow-x: auto; }
+.login { text-align: center; margin-top: 4rem; }
+.google-btn { display: inline-block; padding: 0.75rem 1.5rem; border: 1px solid #ccc; border-radius: 4px; background: #fff; color: var(--fg); text-decoration: none; font-weight: 600; }
+.token { background: #e3f5e6; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; }
+.token code { word-break: break-all; }
+.fields { columns: 2; padding-left: 1.2rem; }
+
+/* Atlas interview */
+.chat { display: flex; flex-direction: column; gap: 0.75rem; padding-bottom: 5rem; }
+.msg { max-width: 80%; padding: 0.6rem 0.9rem; border-radius: 12px; }
+.msg p { margin: 0; white-space: pre-wrap; }
+.msg.atlas { align-self: flex-start; background: #fff; border: 1px solid #e2e5ea; }
+.msg.student { align-self: flex-end; background: var(--accent); color: #fff; }
+.msg .who { display: block; font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 0.2rem; }
+.msg.typing p { color: #888; }
+.chat-form { position: fixed; bottom: 0; left: 0; right: 0; display: flex; gap: 0.5rem; padding: 0.75rem max(16px, calc((100% - 720px) / 2 + 16px)); background: var(--bg); border-top: 1px solid #e2e5ea; }
+.chat-form input { flex: 1; padding: 0.6rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px; }
+.chat-form button:disabled, .chat-form input:disabled { opacity: 0.6; }
+.calculating { text-align: center; margin: 2rem 0; }
+.spinner { width: 32px; height: 32px; margin: 0 auto 0.75rem; border: 3px solid #dfe5ef; border-top-color: var(--accent); border-radius: 50%; animation: spin 0.9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }

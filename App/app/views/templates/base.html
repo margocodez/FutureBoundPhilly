@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Future Bound PHL{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <a href="{{ url_for('main.index') }}">Future Bound PHL</a>
+    {% if g.user %}
+    <form method="post" action="{{ url_for('auth.logout') }}" class="logout">
+      <span>{{ g.user.email }}</span>
+      <button type="submit">Sign out</button>
+    </form>
+    {% endif %}
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

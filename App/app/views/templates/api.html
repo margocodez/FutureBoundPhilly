@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Your API access</h1>
+
+{% if new_token %}
+<div class="token">
+  <p><strong>Your new API token</strong> — copy it now; it won't be shown again.</p>
+  <code>{{ new_token }}</code>
+</div>
+{% endif %}
+
+<form method="post" action="{{ url_for('main.generate_token') }}">
+  <button type="submit">{{ "Regenerate token" if g.user.has_token else "Generate API token" }}</button>
+  {% if g.user.has_token %}<small>Regenerating revokes your current token.</small>{% endif %}
+</form>
+
+<h2>POST /api/predict</h2>
+<p>Send a student's features as JSON with your token in the <code>Authorization</code> header.
+<code>model</code> is <code>"B"</code> (default, no demographics) or <code>"A"</code> (all features).
+Missing fields default to 0.</p>
+<pre>curl -X POST {{ base_url }}/api/predict \
+  -H "Authorization: Bearer {{ new_token or 'YOUR_TOKEN' }}" \
+  -H "Content-Type: application/json" \
+  -d '{"model": "B", "cumulative_gpa": 3.27, "ela_sbac_sd_units": 0.36, "math_sbac_sd_units": 1.25}'</pre>
+
+<p>Response:</p>
+<pre>{"model": "B", "probability": 0.752, "risk_score": 75, "risk_category": "red"}</pre>
+<p>Risk categories: <code>green</code> 0–33, <code>yellow</code> 34–66, <code>red</code> 67–100.</p>
+
+<h3>Fields</h3>
+<ul class="fields">{% for f in fields %}<li><code>{{ f }}</code></li>{% endfor %}</ul>
+{% endblock %}

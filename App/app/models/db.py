@@ -27,8 +27,28 @@ CREATE TABLE IF NOT EXISTS interviews (
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
     completed_at TEXT
 );
-"""
 
+CREATE TABLE IF NOT EXISTS student_profiles (
+    user_id INTEGER PRIMARY KEY REFERENCES users(id),
+    stage TEXT NOT NULL DEFAULT 'deciding',
+    updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+    );
+
+CREATE TABLE IF NOT EXISTS stage_history (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    stage TEXT NOT NULL,
+    changed_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS student_tasks (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    task_key TEXT NOT NULL,
+    completed_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (user_id, task_key)
+);
+"""
 
 def get_db():
     if "db" not in g:

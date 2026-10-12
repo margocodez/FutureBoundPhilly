@@ -1,0 +1,214 @@
+
+[
+  {
+    "id": "compare_offers",
+    "stage": "deciding",
+    "title": "Compare your offers",
+    "due": "03-15",
+    "help": "List out cost, programs, location, and campus size for each school side by side. Pick the 2-3 factors that matter most to you and weigh your options against those first.",
+    "applies_to": {} 
+  },
+  {
+    "id": "review_award_letters",
+    "stage": "deciding",
+    "title": "Review financial aid award letters",
+    "due": "03-15",
+    "help": "Compare the actual grants and scholarships (money you don't pay back) against loans (money you do) for each school. The sticker price isn't what matters -- the net cost after aid is.",
+    "applies_to": {} 
+  },
+  {
+    "id": "visit_campuses",
+    "stage": "deciding",
+    "title": "Visit campuses or attend virtual info sessions",
+    "due": "04-01",
+    "help": "If you haven't seen a campus in person or virtually, now's the time. Ask about class sizes, advising, and student life, not just academics.",
+    "applies_to": {} 
+  },
+  {
+    "id": "narrow_down_choice",
+    "stage": "deciding",
+    "title": "Narrow down to your final choice",
+    "due": "04-25",
+    "help": "Pick the one school you're committing to. You'll need a few days of buffer before the decision deadline to actually accept and pay your deposit.",
+    "applies_to": {} 
+  },
+  {
+    "id": "accept_offer",
+    "stage": "committed",
+    "title": "Formally accept your admission offer",
+    "due": "05-01",
+    "help": "Log into the school's applicant portal and click accept, or submit a signed intent-to-enroll form if that's how your school does it. This is usually separate from paying your deposit.",
+    "applies_to": {},
+    "done_if": {"accepted_offer":1} 
+  },
+  {
+    "id": "pay_deposit",
+    "stage": "committed",
+    "title": "Pay your enrollment deposit",
+    "due": "05-01",
+    "help": "Check your portal for the exact amount and whether a fee waiver is available if cost is a barrier. Pay through the portal and save your confirmation.",
+    "applies_to": {},
+    "done_if":{"paid_deposit":1}
+  },
+  {
+    "id": "save_deposit_receipt",
+    "stage": "committed",
+    "title": "Save your deposit confirmation receipt",
+    "due": "05-01",
+    "help": "Download or screenshot the payment confirmation. You may need it later if there's ever a billing dispute.",
+    "applies_to": {} 
+  },
+  {
+    "id": "decline_other_offers",
+    "stage": "committed",
+    "title": "Decline your other offers",
+    "due": "05-01",
+    "help": "Once you've committed, let your other schools know so they can offer your spot to someone else. Usually a quick click in each portal.",
+    "applies_to": {} 
+  },
+  {
+    "id": "submit_fafsa",
+    "stage": "financial_aid",
+    "title": "Submit the FAFSA",
+    "due": "02-01",
+    "help": "Create your FSA ID first (you and a parent/guardian, if you're a dependent student), then fill out the FAFSA with your family's tax info. List every school you're considering so they all receive your info.",
+    "applies_to": {},
+    "done_if":{"submitted_fafsa_prior_to_graduation":1} 
+  },
+  {
+    "id": "review_sar",
+    "stage": "financial_aid",
+    "title": "Review your Student Aid Report (SAR)",
+    "due": "02-15",
+    "help": "After you submit the FAFSA, you'll get a SAR summarizing what you entered. Check it for typos or errors -- a mistake here can delay your aid.",
+    "applies_to": {} 
+  },
+  {
+    "id": "submit_verification_docs",
+    "stage": "financial_aid",
+    "title": "Submit any financial aid verification documents",
+    "due": "04-01",
+    "help": "Some students get randomly selected for verification and need to submit extra documents (like tax transcripts). Check your portal to see if this applies to you.",
+    "applies_to": {} 
+  },
+  {
+    "id": "respond_to_award_letter",
+    "stage": "financial_aid",
+    "title": "Accept or decline each part of your aid award",
+    "due": "04-15",
+    "help": "Go through your award letter line by line. You can usually accept grants/scholarships in full but choose how much loan money (if any) to actually take.",
+    "applies_to": {} 
+  },
+  {
+    "id": "loan_entrance_counseling",
+    "stage": "financial_aid",
+    "title": "Complete loan entrance counseling",
+    "due": "06-01",
+    "help": "A short required online course covering how federal student loans work and your responsibilities as a borrower. Only needed if you're accepting federal loans.",
+    "applies_to": {} 
+  },
+  {
+    "id": "sign_mpn",
+    "stage": "financial_aid",
+    "title": "Sign the Master Promissory Note (MPN)",
+    "due": "06-01",
+    "help": "A legal agreement to repay your federal student loans. Sign it through studentaid.gov. Only needed if you're accepting federal loans.",
+    "applies_to": {} 
+  },
+  {
+    "id": "placement_testing",
+    "stage": "registered",
+    "title": "Complete placement testing",
+    "due": "06-01",
+    "help": "Take your school's math/English placement test unless your SAT/ACT scores or AP credits already exempt you. Check your portal to confirm what's required.",
+    "applies_to": {"school_type": ["2_year", "unsure"]}
+  },
+  {
+    "id": "meet_advisor",
+    "stage": "registered",
+    "title": "Meet with an academic advisor",
+    "due": "06-15",
+    "help": "Schedule a session to go over your intended major's requirements before you pick classes. Many schools require this before you're allowed to register.",
+    "applies_to": {} 
+  },
+  {
+    "id": "register_for_classes",
+    "stage": "registered",
+    "title": "Register for your first-semester classes",
+    "due": "07-01",
+    "help": "Build a balanced schedule and register during your assigned registration window. Don't wait too long -- popular sections fill up fast.",
+    "applies_to": {} 
+  },
+  {
+    "id": "send_final_transcript",
+    "stage": "registered",
+    "title": "Send your final high school transcript",
+    "due": "07-01",
+    "help": "Request your final transcript (with graduation confirmed) from your high school counselor's office. Ask whether your college wants it electronically or by mail, then confirm it arrived.",
+    "applies_to": {} 
+  },
+  {
+    "id": "pre_enrollment_advising",
+    "stage": "registered",
+    "title": "Attend mandatory pre-enrollment advising",
+    "due": "07-15",
+    "help": "If your school requires a formal advising session before classes start, schedule and attend it. Bring any transfer or AP credit info with you.",
+    "applies_to": {} 
+  },
+  {
+    "id": "activate_student_email",
+    "stage": "ready",
+    "title": "Set up your student email and portal account",
+    "due": "06-01",
+    "help": "Activate your account with the credentials the school emailed you, and set a secure password. Check this inbox regularly -- it's where official college communication goes.",
+    "applies_to": {} 
+  },
+  {
+    "id": "register_for_orientation",
+    "stage": "ready",
+    "title": "Register for and attend orientation",
+    "due": "07-01",
+    "help": "Sign up for a session date through your student portal. This is often where class registration actually happens, so don't skip it.",
+    "applies_to": {} 
+  },
+  {
+    "id": "submit_health_records",
+    "stage": "ready",
+    "title": "Submit immunization/health records",
+    "due": "07-15",
+    "help": "Get your immunization history from your doctor or school nurse and fill out the college's health form. Some schools won't let you register for classes until this is done.",
+    "applies_to": {} 
+  },
+  {
+    "id": "apply_for_housing",
+    "stage": "ready",
+    "title": "Apply for and confirm housing",
+    "due": "05-01",
+    "help": "Submit your housing application and deposit, fill out the roommate questionnaire, and choose a meal plan if required. Confirm your room assignment before move-in.",
+    "applies_to": {"living_on_campus": ["yes", "unsure"]}
+  },
+  {
+    "id": "submit_waivers",
+    "stage": "ready",
+    "title": "Submit required waivers or forms",
+    "due": "08-01",
+    "help": "Submit your health insurance waiver (if you have other coverage) and a FERPA release if you want parents to be able to access your records.",
+    "applies_to": {} 
+  },
+  {
+    "id": "pay_tuition_bill",
+    "stage": "ready",
+    "title": "Pay your tuition bill",
+    "due": "08-01",
+    "help": "Review your bill after financial aid is applied, then either pay in full or set up a payment plan before the deadline.",
+    "applies_to": {} 
+  },
+  {
+    "id": "confirm_schedule",
+    "stage": "ready",
+    "title": "Confirm your class schedule and locate your classes",
+    "due": "08-15",
+    "help": "Double check your final schedule for conflicts, and if you can, walk your route to classes before day one so you're not scrambling the first morning.",
+    "applies_to": {} 
+  }
+]

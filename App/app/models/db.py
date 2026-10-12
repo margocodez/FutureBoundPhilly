@@ -44,9 +44,14 @@ CREATE TABLE IF NOT EXISTS stage_history (
 CREATE TABLE IF NOT EXISTS student_tasks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL REFERENCES users(id),
-    task_key TEXT NOT NULL,
-    completed_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE (user_id, task_key)
+    task_id TEXT,
+    title TEXT NOT NULL,
+    stage TEXT NOT NULL,
+    due_date TEXT,
+    status TEXT NOT NULL DEFAULT 'todo',
+    completed_at TEXT,
+    source TEXT NOT NULL DEFAULT 'template',
+    UNIQUE (user_id, task_id)
 );
 """
 

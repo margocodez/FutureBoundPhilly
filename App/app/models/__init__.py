@@ -5,5 +5,6 @@ from app.models.predictor import MeltPredictor, get_predictor
 from app.models.student import Student
 from app.models.user import User
 from app.models.student_profile import StudentProfile
+from app.models.checklist import Checklist
 
-__all__ = ["atlas", "db", "Interview", "MeltRiskNet", "MeltPredictor", "get_predictor", "Student", "User", "StudentProfile"]
+__all__ = ["atlas", "db", "Interview", "MeltRiskNet", "MeltPredictor", "get_predictor", "Student", "User", "StudentProfile", "Checklist"]

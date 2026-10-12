@@ -21,14 +21,14 @@ class StudentProfile:
         return cls._from_row(row)
 
     @classmethod
-    def completed_tasks(cls, user_id):
+    def task_rows(cls, user_id):
         rows = get_db().execute("SELECT * FROM student_tasks where user_id = ?", (user_id,)).fetchall()
-        return {row["task_key"] for row in rows}
+        return rows
 
     @classmethod
-    def update_stage(cls, user_id, answers):
-        tasks = cls.completed_tasks(user_id)
-        new_stage = current_stage(answers, tasks)
+    def update_stage(cls, user_id):
+        tasks = cls.task_rows(user_id)
+        new_stage = current_stage(tasks)
         profile = cls.get(user_id)
         if profile and profile.stage == new_stage:
             return new_stage

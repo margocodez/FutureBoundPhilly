@@ -1,7 +1,7 @@
 from flask import Blueprint, current_app, g, jsonify, redirect, render_template, request, url_for
 
 from app.controllers.auth_controller import login_required
-from app.models import Interview, atlas, get_predictor, StudentProfile
+from app.models import Interview, atlas, get_predictor, StudentProfile, Checklist
 
 interview_bp = Blueprint("interview", __name__)
 
@@ -39,7 +39,8 @@ def message():
 
     if result["done"]:
         current.complete(get_predictor(current_app.config["ARTIFACT_DIR"], "B"))
-        StudentProfile.update_stage(g.user.id, current.answers)
+        Checklist.generate_for(g.user.id, current.answers)
+        StudentProfile.update_stage(g.user.id)
         return jsonify(replies=result["replies"], done=True,
                        redirect=url_for("interview.checklist"))
     return jsonify(replies=result["replies"], done=False)

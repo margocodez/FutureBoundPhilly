@@ -1,7 +1,10 @@
-from flask import Blueprint, current_app, g, jsonify, redirect, render_template, request, url_for
+from flask import Blueprint, current_app, g, jsonify, redirect, render_template, request, url_for, abort
 
 from app.controllers.auth_controller import login_required
 from app.models import Interview, atlas, get_predictor, StudentProfile, Checklist
+from app.models.checklist import TASK_HELP
+from app.models.enrollment import STAGES
+from app.models.checklist import stage_summary
 
 interview_bp = Blueprint("interview", __name__)
 
@@ -49,4 +52,15 @@ def message():
 @interview_bp.route("/checklist")
 @login_required
 def checklist():
-    return render_template("checklist.html")
+    rows = Checklist.for_user(g.user.id)
+    if not rows:
+        return redirect(url_for("interview.interview"))
+    profile = StudentProfile.get(g.user.id)
+    return render_template("checklist.html", tasks=rows, stage=profile.stage, stages=stage_summary(rows), help=TASK_HELP)
+
+@interview_bp.route("/checklist/<int:task_id>/toggle", methods=["POST"])
+@login_required
+def toggle_task(task_id):
+    if not Checklist.toggle(g.user.id, task_id):
+        abort(404)
+    return redirect(url_for("interview.checklist"))

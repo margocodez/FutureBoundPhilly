@@ -1,4 +1,75 @@
+
 {% extends "base.html" %}
+
 {% block title %}Checklist · Future Bound PHL{% endblock %}
+
 {% block content %}
+
+<div class="checklist-header">
+    <h1>Your checklist</h1>
+    <p>You're in: <strong>{{ stage.replace("_", " ").title() }}</strong></p>
+</div>
+
+<div class="stage-grid">
+    {% for card in stages %}
+
+    <details class="stage-card{% if card.name == stage %} current{% endif %}{% if card.total > 0 and card.done == card.total %} complete{% endif %}"
+             {% if card.name == stage %}open{% endif %}>
+
+        <summary>
+            <h2>{{ card.name.replace("_", " ").title() }}</h2>
+
+            <span class="count">{{ card.done }}/{{ card.total }}</span>
+
+            {% if card.name == stage %}
+                <span class="current-label">You're here</span>
+            {% endif %}
+
+            {% if card.next_due %}
+                <p class="next-due">Next due: {{ card.next_due | nice_date }}</p>
+            {% endif %}
+
+            {% if card.overdue > 0 %}
+                <span class="badge">{{ card.overdue }} overdue</span>
+            {% endif %}
+
+            {% if card.total %}
+                <div class="bar">
+                    <div class="fill"
+                         style="width: {{ (card.done / card.total * 100) | round }}%">
+                    </div>
+                </div>
+            {% endif %}
+        </summary>
+
+        <ul class="task-list">
+            {% for t in card.tasks %}
+                <li class="task">
+
+                    <form method="post"
+                          action="{{ url_for('interview.toggle_task', task_id=t.id) }}">
+
+                        <label>
+                            <input type="checkbox"
+                                   onchange="this.form.submit()"
+                                   {% if t.status == "done" %}checked{% endif %}>
+                            {{ t.title }}
+                        </label>
+
+                        <small>Due {{ t.due_date | nice_date }}</small>
+                    </form>
+
+                    <details class="help">
+                        <summary>How do I do this?</summary>
+                        <p>{{ help.get(t.task_id, "Guidance for this task is coming soon.") }}</p>
+                    </details>
+
+                </li>
+            {% endfor %}
+        </ul>
+
+    </details>
+    {% endfor %}
+</div>
+
 {% endblock %}

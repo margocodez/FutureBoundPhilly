@@ -3,6 +3,7 @@ from flask import Flask
 from app.config import Config
 from app.extensions import oauth
 from app.models import db
+from datetime import date
 
 
 def create_app(config_class=Config):
@@ -12,6 +13,11 @@ def create_app(config_class=Config):
         static_folder="views/static",
     )
     app.config.from_object(config_class)
+
+    @app.template_filter("nice_date")
+    def nice_date(value):
+        d = date.fromisoformat(value)
+        return d.strftime("%b %d, %Y")
 
     db.init_app(app)
     oauth.init_app(app)

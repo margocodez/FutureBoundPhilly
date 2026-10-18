@@ -30,3 +30,274 @@ pre { background: var(--muted); padding: 1rem; border-radius: 6px; overflow-x: a
 .calculating { text-align: center; margin: 2rem 0; }
 .spinner { width: 32px; height: 32px; margin: 0 auto 0.75rem; border: 3px solid #dfe5ef; border-top-color: var(--accent); border-radius: 50%; animation: spin 0.9s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* Checklist page */
+:root {
+    --accent-dark: #244EB5;
+    --accent-light: #EAF1FF;
+    --navy: #172B4D;
+    --text-muted: #8190A5;
+    --border: #E5EAF2;
+    --danger: #D9363E;
+    --success: #38A169;
+}
+
+/* Header */
+.checklist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.checklist-header h1 {
+    color: var(--navy);
+    font-size: 1.8rem;
+    font-weight: 750;
+    letter-spacing: -0.035em;
+    margin: 0;
+}
+
+.checklist-header p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.checklist-header strong {
+    color: var(--accent);
+}
+
+/* Responsive card grid */
+.stage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+    align-items: start;
+}
+
+/* Stage cards */
+.stage-card {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 7px rgba(23, 43, 77, 0.06);
+    transition: box-shadow 0.2s ease;
+}
+
+.stage-card:hover {
+    box-shadow: 0 5px 16px rgba(23, 43, 77, 0.10);
+}
+
+.stage-card.current {
+    border-top: 4px solid var(--accent);
+    padding-top: calc(1.25rem - 3px);
+}
+
+.stage-card.complete {
+    border-top: 4px solid var(--success);
+    padding-top: calc(1.25rem - 3px);
+}
+
+/* Expandable card heading */
+.stage-card > summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.stage-card > summary::-webkit-details-marker {
+    display: none;
+}
+
+.stage-card > summary::after {
+    content: "+";
+    float: right;
+    color: var(--accent);
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.stage-card[open] > summary::after {
+    content: "−";
+}
+
+.stage-card > summary h2 {
+    display: inline;
+    color: var(--navy);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.count {
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.current-label {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.25rem 0.55rem;
+    border-radius: 5px;
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.next-due {
+    margin: 0.8rem 0;
+    color: var(--accent-dark);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Overdue badge */
+.badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background: var(--danger);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Progress bar */
+.bar {
+    width: 100%;
+    height: 7px;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 99px;
+    background: #E1E8F3;
+}
+
+.fill {
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.stage-card.complete .fill {
+    background: var(--success);
+}
+
+/* Task list */
+.task-list {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    border-top: 1px solid var(--border);
+}
+
+.task {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+.task form label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    color: var(--navy);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.task input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0.2rem 0 0;
+    flex-shrink: 0;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+.task small {
+    display: block;
+    margin: 0.4rem 0 0 1.65rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* Expandable task help */
+.help {
+    margin: 0.65rem 0 0 1.65rem;
+}
+
+.help summary {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+.help summary::-webkit-details-marker {
+    display: none;
+}
+
+.help summary:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
+}
+
+.help p {
+    color: #66758A;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin: 0.5rem 0 0;
+}
+
+/* Keyboard accessibility */
+.stage-card summary:focus-visible,
+.help summary:focus-visible,
+.task input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* Mobile layout */
+@media (max-width: 650px) {
+    .checklist-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .checklist-header h1 {
+        font-size: 1.55rem;
+    }
+
+    .stage-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .stage-card {
+        padding: 1rem;
+    }
+
+    .stage-card.current,
+    .stage-card.complete {
+        padding-top: calc(1rem - 3px);
+    }
+}

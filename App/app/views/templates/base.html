@@ -17,7 +17,6 @@
       <a href="{{ url_for('mentor.request_page') }}">Find a Mentor</a>
       {% elif g.user.role == "staff" %}
       <a href="{{ url_for('staff.dashboard') }}">Staff</a>
-      <a href="{{ url_for('mentor.my_students') }}">My Students</a>
       {% elif g.user.role == "mentor" %}
       <a href="{{ url_for('mentor.my_students') }}">My Students</a>
       {% endif %}

@@ -25,13 +25,16 @@
             <h3 class="studentName">
                 {{ s["name"] }}
             </h3>
+            {% if s["mentor_email"] %}
+            <p class="mentor-line">Mentor: {{ s["mentor_name"] }} (<a href="mailto:{{ s['mentor_email'] }}">{{ s["mentor_email"] }}</a>)</p>
+            {% endif %}
             <form method="post" action="{{ url_for('staff.assign_mentor', user_id=s['id']) }}">
             <select name="mentor_email">
                 {% for email in config.MENTOR_EMAILS | sort %}
                 <option value="{{ email }}">{{ email }}</option>
                 {% endfor %}
             </select>
-            <button type="submit">Assign Mentor</button>
+            <button type="submit">{% if s["mentor_email"] %}Change mentor{% else %}Assign Mentor{% endif %}</button>
             </form>
             <small>
                 {{ s["email"] }}
@@ -55,13 +58,16 @@
             <h3 class="studentName">
                 {{ s["name"] }}
             </h3>
+            {% if s["mentor_email"] %}
+            <p class="mentor-line">Mentor: {{ s["mentor_name"] }} (<a href="mailto:{{ s['mentor_email'] }}">{{ s["mentor_email"] }}</a>)</p>
+            {% endif %}
             <form method="post" action="{{ url_for('staff.assign_mentor', user_id=s['id']) }}">
             <select name="mentor_email">
                 {% for email in config.MENTOR_EMAILS | sort %}
                 <option value="{{ email }}">{{ email }}</option>
                 {% endfor %}
             </select>
-            <button type="submit">Assign Mentor</button>
+            <button type="submit">{% if s["mentor_email"] %}Change mentor{% else %}Assign Mentor{% endif %}</button>
             </form>
             <small>
                 {{ s["email"] }}
@@ -85,13 +91,16 @@
             <h3 class="studentName">
                 {{ s["name"] }}
             </h3>
+            {% if s["mentor_email"] %}
+            <p class="mentor-line">Mentor: {{ s["mentor_name"] }} (<a href="mailto:{{ s['mentor_email'] }}">{{ s["mentor_email"] }}</a>)</p>
+            {% endif %}
             <form method="post" action="{{ url_for('staff.assign_mentor', user_id=s['id']) }}">
             <select name="mentor_email">
                 {% for email in config.MENTOR_EMAILS | sort %}
                 <option value="{{ email }}">{{ email }}</option>
                 {% endfor %}
             </select>
-            <button type="submit">Assign Mentor</button>
+            <button type="submit">{% if s["mentor_email"] %}Change mentor{% else %}Assign Mentor{% endif %}</button>
             </form>
             <small>
                 {{ s["email"] }}
@@ -115,13 +124,16 @@
             <h3 class="studentName">
                 {{ s["name"] }}
             </h3>
+            {% if s["mentor_email"] %}
+            <p class="mentor-line">Mentor: {{ s["mentor_name"] }} (<a href="mailto:{{ s['mentor_email'] }}">{{ s["mentor_email"] }}</a>)</p>
+            {% endif %}
             <form method="post" action="{{ url_for('staff.assign_mentor', user_id=s['id']) }}">
             <select name="mentor_email">
                 {% for email in config.MENTOR_EMAILS | sort %}
                 <option value="{{ email }}">{{ email }}</option>
                 {% endfor %}
             </select>
-            <button type="submit">Assign Mentor</button>
+            <button type="submit">{% if s["mentor_email"] %}Change mentor{% else %}Assign Mentor{% endif %}</button>
             </form>
             <small>
                 {{ s["email"] }}

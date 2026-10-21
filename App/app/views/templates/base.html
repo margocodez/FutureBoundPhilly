@@ -11,13 +11,17 @@
     <a href="{{ url_for('main.index') }}">FutureBound Philly</a>
     {% if g.user %}
     <nav>
+      {% if g.user.email.lower() not in config.STAFF_EMAILS %}
       <a href="{{ url_for('interview.checklist') }}">Checklist</a>
       <a href="{{ url_for('atlas.chat') }}">Atlas</a>
+      {% elif g.user.email.lower() in config.STAFF_EMAILS %}<a href="{{ url_for('staff.dashboard') }}">Staff</a>{% endif %}
     </nav>
     <form method="post" action="{{ url_for('auth.logout') }}" class="logout">
       <span>{{ g.user.email }}</span>
       <button type="submit">Sign out</button>
     </form>
+    {% else %}
+    <a class="header-login" href="{{ url_for('auth.login') }}">Sign in</a>
     {% endif %}
   </header>
   <main>{% block content %}{% endblock %}</main>

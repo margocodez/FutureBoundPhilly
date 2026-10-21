@@ -397,3 +397,246 @@ pre { background: var(--muted); padding: 1rem; border-radius: 6px; overflow-x: a
         max-width: 92%;
     }
 }
+
+/* Staff page */
+
+/* Navigation tabs */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.tab {
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 6px 6px 0 0;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tab:hover {
+    background: var(--accent-light);
+    color: var(--accent-dark);
+}
+
+.tab.active {
+    border-color: var(--border);
+    border-bottom-color: var(--bg);
+    background: var(--bg);
+    color: var(--accent);
+}
+
+/* Risk indicators */
+.risk {
+    display: inline-block;
+    padding: 0.3rem 0.65rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.risk.red {
+    background: #FDE8E8;
+    color: #B4232D;
+}
+
+.risk.yellow {
+    background: #FFF4CC;
+    color: #8A6100;
+}
+
+.risk.green {
+    background: #DDF5E5;
+    color: #207544;
+}
+
+.risk.none {
+    background: var(--muted);
+    color: var(--text-muted);
+}
+
+/* Student name search */
+#nameSearch {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin-bottom: 1.25rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    background: #fff;
+    color: var(--fg);
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#nameSearch::placeholder {
+    color: var(--text-muted);
+}
+
+#nameSearch:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(43, 95, 171, 0.15);
+}
+
+@media (max-width: 600px) {
+    .tabs {
+        gap: 0.25rem;
+    }
+
+    .tab {
+        padding: 0.6rem 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    #nameSearch {
+        max-width: 100%;
+    }
+}
+
+
+/* Home page hero */
+.hero {
+    width: min(1100px, calc(100vw - 32px));
+    box-sizing: border-box;
+    min-height: 70vh;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+    color: #fff;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 43, 77, 0.88),
+            rgba(23, 43, 77, 0.2)
+        ),
+        url("../images/philly.jpg") center / cover;
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-text h1 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    color: #fff;
+}
+
+.hero-text p {
+    margin: 0 0 2rem;
+    max-width: 600px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #fff;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: 99px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+/* Home page feature cards */
+.features.stage-grid {
+    width: min(1100px, calc(100vw - 32px));
+    box-sizing: border-box;
+    margin: -4rem 0 3rem 50%;
+    transform: translateX(-50%);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.stage-card.feature {
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(229, 234, 242, 0.85);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(23, 43, 77, 0.08);
+}
+
+.stage-card.feature h3 {
+    margin-top: 0;
+    color: var(--navy);
+}
+
+.stage-card.feature p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Home page footer */
+.home-footer {
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Mobile home page */
+@media (max-width: 600px) {
+    .hero {
+        min-height: 65vh;
+        padding: 2rem 1.5rem;
+        background:
+            linear-gradient(
+                180deg,
+                rgba(23, 43, 77, 0.88),
+                rgba(23, 43, 77, 0.45)
+            ),
+            url("../images/philly.jpg") center / cover;
+    }
+
+    .hero-text h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-text p {
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    .features.stage-grid {
+        grid-template-columns: 1fr;
+        margin-top: -2rem;
+        gap: 1rem;
+    }
+
+    .stage-card.feature {
+        padding: 1.25rem;
+    }
+}

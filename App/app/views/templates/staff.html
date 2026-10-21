@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block title %}Staff · FutureBound Philly{% endblock %}
+{% block content %}
+<h1>Students by risk</h1>
+<p>Highest predicted melt risk first. Visible to staff only.</p>
+
+<div class="tabs">
+  <button class="tab active" onclick="openStatus('HighRisk', this)">High Risk</button>
+  <button class="tab" onclick="openStatus('MediumRisk', this)">Medium Risk</button>
+  <button class="tab" onclick="openStatus('LowRisk', this)">Low Risk</button>
+  <button class="tab" onclick="openStatus('NoInterview', this)">No Interview</button>
+</div>
+
+<input type="text" 
+       id="nameSearch" 
+       onkeyup="filterNames1()" 
+       placeholder="Search for students...">
+
+<div id="HighRisk" class="tab-panel active">
+  <h2>High Risk</h2>
+    <div class="stage-grid">
+    {% for s in students if s["risk_category"] == "red" %}
+        <div class="stage-card student-card">
+            Student
+            <h3 class="studentName">
+                {{ s["name"] }}
+            </h3>
+            <button type = "button">
+                Assign Mentor
+            </button>
+            <small>
+                {{ s["email"] }}
+            </small>
+            <span class="risk {{ s['risk_category'] }}">{{ s['risk_score'] }}</span>
+            Stage: {{ s["stage"] or "—" }}
+            {% if s["overdue"] %}<span class="badge">{{ s["overdue"] }} overdue</span>{% endif %}
+        </div>
+    {% else %}
+        <p>There are no high risk students right now.</p>
+    {% endfor %}
+    </div>
+</div>
+
+<div id="MediumRisk" class="tab-panel" style="display:none">
+  <h2>Medium Risk</h2>
+    <div class="stage-grid">
+    {% for s in students if s["risk_category"] == "yellow" %}
+        <div class="stage-card student-card">
+            Student
+            <h3 class="studentName">
+                {{ s["name"] }}
+            </h3>
+            <button type = "button">
+                Assign Mentor
+            </button>
+            <small>
+                {{ s["email"] }}
+            </small>
+            <span class="risk {{ s['risk_category'] }}">{{ s['risk_score'] }}</span>
+            Stage: {{ s["stage"] or "—" }}
+            {% if s["overdue"] %}<span class="badge">{{ s["overdue"] }} overdue</span>{% endif %}
+        </div>
+    {% else %}
+        <p>There are no medium risk students right now.</p>
+    {% endfor %}
+    </div>
+</div>
+
+<div id="LowRisk" class="tab-panel" style="display:none">
+  <h2>Low Risk</h2>
+    <div class="stage-grid">
+    {% for s in students if s["risk_category"] == "green" %}
+        <div class="stage-card student-card">
+            Student
+            <h3 class="studentName">
+                {{ s["name"] }}
+            </h3>
+            <button type = "button">
+                Assign Mentor
+            </button>
+            <small>
+                {{ s["email"] }}
+            </small>
+            <span class="risk {{ s['risk_category'] }}">{{ s['risk_score'] }}</span>
+            Stage: {{ s["stage"] or "—" }}
+            {% if s["overdue"] %}<span class="badge">{{ s["overdue"] }} overdue</span>{% endif %}
+        </div>
+    {% else %}
+        <p>There are no low risk students right now.</p>
+    {% endfor %}
+    </div>
+</div>
+
+<div id="NoInterview" class="tab-panel" style="display:none">
+  <h2>No Interview</h2>
+    <div class="stage-grid">
+    {% for s in students if s["risk_category"] == None %}
+        <div class="stage-card student-card">
+            Student
+            <h3 class="studentName">
+                {{ s["name"] }}
+            </h3>
+            <button type = "button">
+                Assign Mentor
+            </button>
+            <small>
+                {{ s["email"] }}
+            </small>
+            <span class="risk none">Not started</span>
+            Stage: {{ s["stage"] or "—" }}
+        </div>
+    {% else %}
+        <p>There are no students without completed interviews right now.</p>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}<script>
+function openStatus(statusName, btn) {
+    var i;
+    var x = document.getElementsByClassName("tab-panel");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    var tabs = document.getElementsByClassName("tab");
+    for (i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active");
+    }
+    btn.classList.add("active")
+    document.getElementById(statusName).style.display = "block";  
+}
+function filterNames1() {
+  var input = document.getElementById("nameSearch");
+  var filter = input.value.toUpperCase();
+  var cards = document.getElementsByClassName("student-card");
+  for (var i = 0; i < cards.length; i++) {
+    var nameHeader = cards[i].querySelector(".studentName");
+    if (nameHeader) {
+      var txtValue = nameHeader.textContent || nameHeader.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = ""
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>{% endblock %}

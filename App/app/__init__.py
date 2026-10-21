@@ -34,11 +34,13 @@ def create_app(config_class=Config):
     from app.controllers.interview_controller import interview_bp
     from app.controllers.main_controller import main_bp
     from app.controllers.atlas_controller import atlas_bp
+    from app.controllers.staff_controller import staff_bp
 
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(api_bp)
     app.register_blueprint(interview_bp)
     app.register_blueprint(atlas_bp)
+    app.register_blueprint(staff_bp)
 
     return app

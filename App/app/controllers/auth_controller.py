@@ -1,6 +1,6 @@
 from functools import wraps
 
-from flask import Blueprint, abort, g, redirect, session, url_for
+from flask import Blueprint, abort, g, redirect, session, url_for, current_app
 
 from app.extensions import oauth
 from app.models import User
@@ -19,6 +19,16 @@ def login_required(view):
     def wrapped(*args, **kwargs):
         if g.user is None:
             return redirect(url_for("main.index"))
+        return view(*args, **kwargs)
+    return wrapped
+
+def staff_required(view):
+    @wraps(view)
+    def wrapped(*args, **kwargs):
+        if g.user is None:
+            return redirect(url_for("main.index"))
+        if g.user.email.lower() not in current_app.config["STAFF_EMAILS"]:
+            abort(403)
         return view(*args, **kwargs)
     return wrapped
 

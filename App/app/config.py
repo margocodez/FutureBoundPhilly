@@ -24,3 +24,5 @@ class Config:
     SESSION_COOKIE_SAMESITE = "Lax"
 
     ATLAS_DAILY_MESSAGE_CAP = 50
+
+    STAFF_EMAILS = {email.strip().lower() for email in os.environ.get("STAFF_EMAILS", "").split(",") if email.strip()}

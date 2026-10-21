@@ -646,3 +646,25 @@ pre { background: var(--muted); padding: 1rem; border-radius: 6px; overflow-x: a
         padding: 1.25rem;
     }
 }
+
+
+/* Form labels and fields */
+.mentor-form label {
+    display: block;
+    margin: 0 0 0.4rem;
+    font-weight: 600;
+}
+
+.mentor-form input,
+.mentor-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.mentor-form textarea {
+    resize: vertical;
+}

@@ -32,6 +32,16 @@ def staff_required(view):
         return view(*args, **kwargs)
     return wrapped
 
+def mentor_required(view):
+    @wraps(view)
+    def wrapped(*args, **kwargs):
+        if g.user is None:
+            return redirect(url_for("main.index"))
+        if g.user.role not in ("mentor", "staff"):
+            abort(403)
+        return view(*args, **kwargs)
+    return wrapped
+
 
 @auth_bp.route("/login")
 def login():

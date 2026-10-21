@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}My students · FutureBound Philly{% endblock %}
+{% block content %}
+<h1>My students</h1>
+
+<div class="stage-grid">
+{% for s in students %}
+    <div class="stage-card">
+        <h3>{{ s["name"] }}</h3>
+        <small>{{ s["email"] }}</small>
+        {% if s["help_with"] %}
+            <p>Asked for help with: {{ s["help_with"] }}</p>
+        {% endif %}
+        {% if s["best_time"] %}
+            <p>Best time for student: {{ s["best_time"] }}</p>
+        {% endif %}
+        <p>Assigned {{ s["assigned_at"] }}</p>
+    </div>
+{% else %}
+    <p>No students assigned yet.</p>
+{% endfor %}
+</div>
+{% endblock %}

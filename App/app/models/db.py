@@ -61,6 +61,21 @@ CREATE TABLE IF NOT EXISTS conversation_messages(
     content TEXT NOT NULL,
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS mentor_requests(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    help_with TEXT NOT NULL,
+    best_time TEXT,
+    status TEXT NOT NULL DEFAULT 'open',
+    created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS mentor_assignments(
+    user_id INTEGER PRIMARY KEY NOT NULL REFERENCES users(id),
+    mentor_email TEXT NOT NULL,
+    assigned_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
 """
 
 def get_db():

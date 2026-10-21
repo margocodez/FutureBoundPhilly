@@ -25,9 +25,14 @@
             <h3 class="studentName">
                 {{ s["name"] }}
             </h3>
-            <button type = "button">
-                Assign Mentor
-            </button>
+            <form method="post" action="{{ url_for('staff.assign_mentor', user_id=s['id']) }}">
+            <select name="mentor_email">
+                {% for email in config.MENTOR_EMAILS | sort %}
+                <option value="{{ email }}">{{ email }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Assign Mentor</button>
+            </form>
             <small>
                 {{ s["email"] }}
             </small>
@@ -50,9 +55,14 @@
             <h3 class="studentName">
                 {{ s["name"] }}
             </h3>
-            <button type = "button">
-                Assign Mentor
-            </button>
+            <form method="post" action="{{ url_for('staff.assign_mentor', user_id=s['id']) }}">
+            <select name="mentor_email">
+                {% for email in config.MENTOR_EMAILS | sort %}
+                <option value="{{ email }}">{{ email }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Assign Mentor</button>
+            </form>
             <small>
                 {{ s["email"] }}
             </small>
@@ -75,9 +85,14 @@
             <h3 class="studentName">
                 {{ s["name"] }}
             </h3>
-            <button type = "button">
-                Assign Mentor
-            </button>
+            <form method="post" action="{{ url_for('staff.assign_mentor', user_id=s['id']) }}">
+            <select name="mentor_email">
+                {% for email in config.MENTOR_EMAILS | sort %}
+                <option value="{{ email }}">{{ email }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Assign Mentor</button>
+            </form>
             <small>
                 {{ s["email"] }}
             </small>
@@ -100,9 +115,14 @@
             <h3 class="studentName">
                 {{ s["name"] }}
             </h3>
-            <button type = "button">
-                Assign Mentor
-            </button>
+            <form method="post" action="{{ url_for('staff.assign_mentor', user_id=s['id']) }}">
+            <select name="mentor_email">
+                {% for email in config.MENTOR_EMAILS | sort %}
+                <option value="{{ email }}">{{ email }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Assign Mentor</button>
+            </form>
             <small>
                 {{ s["email"] }}
             </small>

@@ -11,9 +11,12 @@ def index():
     if g.user is None:
         button_url = url_for("auth.login")
         button_text = "Sign in with Google"
-    elif g.user.email.lower() in current_app.config["STAFF_EMAILS"]:
+    elif g.user.role == "staff":
         button_url = url_for("staff.dashboard")
         button_text = "Open staff dashboard"
+    elif g.user.role == "mentor":
+        button_url = url_for("mentor.my_students")
+        button_text = "See my students"
     else:
         interview = Interview.latest_for_user(g.user.id)
         if interview and interview.is_complete:

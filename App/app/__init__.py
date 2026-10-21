@@ -35,6 +35,7 @@ def create_app(config_class=Config):
     from app.controllers.main_controller import main_bp
     from app.controllers.atlas_controller import atlas_bp
     from app.controllers.staff_controller import staff_bp
+    from app.controllers.mentor_controller import mentor_bp
 
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
@@ -42,5 +43,6 @@ def create_app(config_class=Config):
     app.register_blueprint(interview_bp)
     app.register_blueprint(atlas_bp)
     app.register_blueprint(staff_bp)
+    app.register_blueprint(mentor_bp)
 
     return app

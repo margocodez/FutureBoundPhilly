@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Get a Mentor · FutureBound Philly{% endblock %}
+{% block content %}
+<h1>Get a mentor</h1>
+
+<div class="stage-card">
+    {% if assignment %}
+        Your mentor is {{ assignment["mentor_name"] }}. They'll reach out at {{ g.user.email }}.
+    {% elif request_row %}
+        We got your request! We'll match you with a mentor soon. 
+        <p>You asked about: {{ request_row["help_with"] }}</p>
+    {% else %}
+        <form class = "mentor-form" method="post" action="{{ url_for('mentor.submit') }}">
+        <label for="help_with">What would you like help with?</label>
+        <textarea id="help_with" name="help_with" required maxlength="1000" rows="4"></textarea>
+
+        <label for="best_time">When are you usually free? (optional)</label>
+        <input id="best_time" name="best_time" maxlength="100" placeholder="e.g. weekday evenings">
+
+        <button type="submit">Request a mentor</button>
+        </form>
+            {% endif %}
+</div>
+{% endblock %}

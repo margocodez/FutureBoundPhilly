@@ -26,3 +26,4 @@ class Config:
     ATLAS_DAILY_MESSAGE_CAP = 50
 
     STAFF_EMAILS = {email.strip().lower() for email in os.environ.get("STAFF_EMAILS", "").split(",") if email.strip()}
+    MENTOR_EMAILS = {email.strip().lower() for email in os.environ.get("MENTOR_EMAILS", "").split(",") if email.strip()}

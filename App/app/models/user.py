@@ -1,6 +1,7 @@
 import hashlib
 import secrets
 from dataclasses import dataclass
+from flask import current_app
 
 from app.models.db import get_db
 
@@ -49,6 +50,15 @@ class User:
         ).fetchone()
         return cls._from_row(row)
 
+    @property
+    def role(self):
+        if self.email.lower() in current_app.config["STAFF_EMAILS"]:
+            return "staff"
+        elif self.email.lower() in current_app.config["MENTOR_EMAILS"]:
+            return "mentor"
+        else:
+            return "student"
+        
     def regenerate_api_token(self):
         """Issue a new token (invalidating the old one). Only the hash is stored."""
         token = secrets.token_urlsafe(32)

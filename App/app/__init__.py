@@ -33,10 +33,12 @@ def create_app(config_class=Config):
     from app.controllers.auth_controller import auth_bp
     from app.controllers.interview_controller import interview_bp
     from app.controllers.main_controller import main_bp
+    from app.controllers.atlas_controller import atlas_bp
 
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(api_bp)
     app.register_blueprint(interview_bp)
+    app.register_blueprint(atlas_bp)
 
     return app

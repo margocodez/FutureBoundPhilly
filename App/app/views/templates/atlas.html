@@ -1,0 +1,139 @@
+
+{% extends "base.html" %}
+
+{% block title %}Atlas · FutureBound Philly{% endblock %}
+
+{% block content %}
+
+<div class="chat" id="chat">
+
+  <div class="msg atlas">
+    <span class="who">Atlas</span>
+    <p>Hi{% if first_name %}, {{ first_name }}{% endif %}! I'm here to help you with your college enrollment checklist. What can I help you with?</p>
+  </div>
+
+  {% for line in transcript %}
+  <div class="msg {{ line.role }}">
+    {% if line.role == "atlas" %}
+      <span class="who">Atlas</span>
+    {% endif %}
+    <p>{{ line.text if line.text is defined else line.content }}</p>
+  </div>
+  {% endfor %}
+
+</div>
+
+<form id="chat-form"
+      class="chat-form"
+      data-url="{{ url_for('atlas.message') }}">
+
+  <input
+    id="chat-input"
+    type="text"
+    name="message"
+    placeholder="Ask Atlas about your checklist..."
+    autocomplete="off"
+    maxlength="2000"
+    required
+    autofocus
+  >
+
+  <button type="submit">Send</button>
+</form>
+
+<div id="calculating" class="calculating" hidden>
+  <div class="spinner"></div>
+  <p>Atlas is thinking...</p>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function () {
+  const form = document.getElementById("chat-form");
+  const input = document.getElementById("chat-input");
+  const chat = document.getElementById("chat");
+  const calculating = document.getElementById("calculating");
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const message = input.value.trim();
+    if (!message) return;
+
+    const button = form.querySelector("button");
+    button.disabled = true;
+    input.disabled = true;
+
+    // Display the student's message.
+    const studentMessage = document.createElement("div");
+    studentMessage.className = "msg student";
+
+    const studentText = document.createElement("p");
+    studentText.textContent = message;
+    studentMessage.appendChild(studentText);
+    chat.appendChild(studentMessage);
+
+    input.value = "";
+    calculating.hidden = false;
+    chat.scrollTop = chat.scrollHeight;
+
+    try {
+      const response = await fetch(form.dataset.url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message: message })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+
+      // The controller returns replies as a list.
+      (data.replies || []).forEach(function (reply) {
+        const atlasMessage = document.createElement("div");
+        atlasMessage.className = "msg atlas";
+
+        const who = document.createElement("span");
+        who.className = "who";
+        who.textContent = "Atlas";
+
+        const text = document.createElement("p");
+        text.textContent = reply;
+
+        atlasMessage.appendChild(who);
+        atlasMessage.appendChild(text);
+        chat.appendChild(atlasMessage);
+      });
+
+    } catch (error) {
+      const errorMessage = document.createElement("div");
+      errorMessage.className = "msg atlas";
+
+      const who = document.createElement("span");
+      who.className = "who";
+      who.textContent = "Atlas";
+
+      const text = document.createElement("p");
+      text.textContent = error.message;
+
+      errorMessage.appendChild(who);
+      errorMessage.appendChild(text);
+      chat.appendChild(errorMessage);
+
+    } finally {
+      calculating.hidden = true;
+      button.disabled = false;
+      input.disabled = false;
+      input.focus();
+      chat.scrollTop = chat.scrollHeight;
+    }
+  });
+})();
+</script>
+{% endblock %}

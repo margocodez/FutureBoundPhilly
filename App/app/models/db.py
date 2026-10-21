@@ -53,6 +53,14 @@ CREATE TABLE IF NOT EXISTS student_tasks (
     source TEXT NOT NULL DEFAULT 'template',
     UNIQUE (user_id, task_id)
 );
+
+CREATE TABLE IF NOT EXISTS conversation_messages(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    role TEXT NOT NULL,
+    content TEXT NOT NULL,
+    created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
 """
 
 def get_db():

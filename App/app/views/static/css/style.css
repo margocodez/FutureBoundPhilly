@@ -2,7 +2,8 @@
 body { margin: 0; font-family: system-ui, sans-serif; color: var(--fg); background: var(--bg); }
 header { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--accent); }
 header a, header span { color: #fff; text-decoration: none; font-weight: 600; }
-header .logout { display: flex; gap: 0.75rem; align-items: center; margin: 0; display: flex; gap: 1.25 rem; }
+header .logout { display: flex; gap: 0.75rem; align-items: center; margin: 0; }
+header nav { display: flex; gap: 1.25rem; }
 header .logout span { font-weight: 400; }
 header .logout button { background: #fff; color: var(--accent); }
 main { max-width: 720px; margin: 0 auto; padding: 1rem; }
@@ -387,7 +388,7 @@ pre { background: var(--muted); padding: 1rem; border-radius: 6px; overflow-x: a
         padding: 0.75rem;
     }
 
-    .header {
+    header {
         flex-wrap: wrap;
         gap: 0.5rem;
     }

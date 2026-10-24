@@ -19,9 +19,9 @@ MODEL_SPECS = {
 
 
 def risk_category(score):
-    if score >= 67:
+    if score >= 57:
         return "red"
-    if score >= 34:
+    if score >= 45:
         return "yellow"
     return "green"
 

@@ -136,6 +136,7 @@ class Reminder:
                     server.login(username, mail_password)
 
                 server.send_message(message)
-        except (smtplib.SMTPException, OSError):
+        except (smtplib.SMTPException, OSError) as e:
+            print("Email failed:", e, flush=True)
             return False
         return True

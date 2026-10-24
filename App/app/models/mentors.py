@@ -31,4 +31,3 @@ class Mentor:
                                     ON r.id = (SELECT MAX(id) FROM mentor_requests WHERE user_id = m.user_id)
                                     WHERE m.mentor_email = ?
                                     ORDER BY m.assigned_at DESC""", (mentor_email,)).fetchall()
-    

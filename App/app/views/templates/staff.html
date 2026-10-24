@@ -4,6 +4,10 @@
 <h1>Students by risk</h1>
 <p>Highest predicted melt risk first. Visible to staff only.</p>
 
+<form method="post" action="{{ url_for('staff.send_reminders') }}" class="reminders-form">
+  <button type="submit">Send due-soon reminders</button>
+</form>
+
 <div class="tabs">
   <button class="tab active" onclick="openStatus('HighRisk', this)">High Risk</button>
   <button class="tab" onclick="openStatus('MediumRisk', this)">Medium Risk</button>

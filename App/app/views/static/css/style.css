@@ -668,3 +668,6 @@ pre { background: var(--muted); padding: 1rem; border-radius: 6px; overflow-x: a
 .mentor-form textarea {
     resize: vertical;
 }
+
+.flash { padding: 0.75rem 1rem; border-radius: 6px; background: var(--accent-light); color: var(--accent-dark); font-weight: 600; }
+.reminders-form { margin: 0 0 1rem; }

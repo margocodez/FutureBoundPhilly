@@ -76,6 +76,15 @@ CREATE TABLE IF NOT EXISTS mentor_assignments(
     mentor_email TEXT NOT NULL,
     assigned_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS reminders_sent(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    task_row_id INTEGER NOT NULL REFERENCES student_tasks(id),
+    sent_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (user_id, task_row_id)
+);
+
 """
 
 def get_db():

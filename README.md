@@ -55,6 +55,8 @@ FutureBound Philly is designed to support students without treating an experimen
 - Secret management: Credentials and private configuration belong in `.env`, not in version control.
 - Student data: Real student records and other sensitive data should not be committed to Git. The machine-learning training dataset is simulated, not a dataset of 100,000 actual students.
 - Model limitations: Risk predictions are experimental and should not be used as the sole basis for decisions about students or access to resources.
+- Model B purposefully does not rely on sensitive demographic information. The AUC declines, but ethicality improves.
+- Model A is not used by the app; however it is in the file for further research purposes. It utilizes demographic information to achieve a higher prediction accuracy. 
 
 These safeguards reflect the project's intended design. Any real-world pilot would require additional review of privacy, security, consent, and access controls.
 

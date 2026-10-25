@@ -1,5 +1,8 @@
 FutureBound Philly
 
+Our mission is to eliminate summer melt and improve college matriculation rates among School District of Philadelphia students by providing AI-powered guidance, personalized mentorship, and proactive support during the critical transition from high school to college. We empower students to successfully navigate enrollment requirements, overcome barriers, and matriculate into post-secondary education, regardless of their socioeconomic background.
+We believe that every student who earns admission to college deserves the opportunity, resources, and support necessary to enroll and succeed.
+
 **How to Run:**
 
 **Prerequisites**

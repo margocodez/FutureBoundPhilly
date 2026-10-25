@@ -1,3 +1,5 @@
+FutureBound Philly
+
 FutureBound Philly is designed to support students without treating an experimental risk score as a judgment about their potential.
 
 - Atlas safety rules: The support prompt includes boundaries intended to keep conversations focused on college enrollment, provide appropriate guidance, and avoid unsupported promises about admissions or financial aid.
@@ -35,10 +37,11 @@ What Claude Wrote or Helped Implement
 - Initial app framework: Claude wrote parts of the first Flask application version before October 4, 2026, including app setup and configuration, Google sign-in, the Atlas interview system, the developer API and access-key functionality, and initial versions of several templates and the stylesheet.
 - Atlas support prompt edits: Claude edited specific sections concerning AI transparency, FAFSA and family income, safety, and the current date. I wrote the rest of the support prompt.
 - Reminder feature: Claude wrote the staff route for sending due-soon reminders, the reminder button and confirmation message, two CSS rules, and a fix to the checklist link in `reminders.py`. The corresponding commit identifies Claude as a co-author.
+- Synthetic data set: Formed based on SAGE published summer melt research and findings from the School district of Philadelhpia. 100,000 simulated students created to train Model A and Model B
 
 What I Wrote
 
-- The machine-learning training scripts and Model A and Model B in `FBP_NN/`
+- The machine-learning training scripts and Model A and Model B (the one actually used on students in the app) in `FBP_NN/`
 - The enrollment stages
 - The personalized checklist, task pages, and task-completion functionality
 - The Atlas support chat and most of its support prompt
@@ -56,6 +59,6 @@ Acknowledgments and Research
 FutureBound Philly's design was informed by research on summer melt and college enrollment barriers, including:
 
 - [School District of Philadelphia: Summer Melt — Results from the Classes of 2022, 2023, and 2024](https://www.philasd.org/research/2025/07/31/summer-melt-how-many-seniors-follow-through-on-plans-to-attend-college-results-from-the-senior-classes-of-2022-2023-and-2024/)
-- Research on summer melt and enrollment support, including work published through SAGE Journals.
+- "Leaks in the College Access Pipeline: Examining Summer Melt in a Large Urban School District" - Research on summer melt and enrollment support, including work published through SAGE Journals.
 
 Research informs the platform's design, but the app's model accuracy and its impact on actual college enrollment still need to be evaluated.

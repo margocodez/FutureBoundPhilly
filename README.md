@@ -1,5 +1,47 @@
 FutureBound Philly
 
+**How to Run:**
+
+**Prerequisites**
+Python 3.12
+A Google Cloud OAuth 2.0 client ID and secret for a Web application
+An Anthropic API key for Atlas, the AI college counselor
+Configure this authorized redirect URI in your Google OAuth client: http://localhost:5001/auth/callback
+
+**Installation**
+1. Clone the repository and navigate to the application directory.
+git clone https://github.com/margocodez/FutureBoundPhilly.git
+cd FutureBoundPhilly/App
+2. Create and activate a virtual environment.
+python3 -m venv .venv
+source .venv/bin/activate
+3. Install dependencies.
+pip install -r requirements.txt
+4. Configure environment variables.
+Create your local environment file:
+cp .env.example .env
+Open .env and configure the following variables:
+SECRET_KEY: A securely generated random secret for Flask.
+GOOGLE_CLIENT_ID: Your Google OAuth client ID.
+GOOGLE_CLIENT_SECRET: Your Google OAuth client secret.
+ANTHROPIC_API_KEY: Your Anthropic API key for Atlas.
+STAFF_EMAILS: Google email address(es) authorized to access the staff dashboard.
+MENTOR_EMAILS: Optional email address(es) for mentor access.
+MAIL_USERNAME: Optional email account for sending reminders.
+MAIL_PASSWORD: Optional email account password or app password.
+Keep .env private. Never commit API keys, OAuth secrets, or other credentials to GitHub. If email credentials are not configured, reminder emails are printed to the terminal instead.
+6. Start the application.
+Run the app on port 5001 to match the Google OAuth redirect URI:
+PORT=5001 python run.py
+7. Open the application.
+Navigate to http://localhost:5001 in your browser and sign in with Google.
+
+**Additional Notes**
+Database: The SQLite database initializes automatically on the first run; no manual setup is required.
+Machine learning: The trained Model B files are included in FBP_NN/, so you do not need to retrain the model.
+Credentials: You must configure your own Google OAuth credentials and Anthropic API key before running the app.
+Security: Ensure .env is excluded by .gitignore and never publish private credentials.
+
 FutureBound Philly is designed to support students without treating an experimental risk score as a judgment about their potential.
 
 - Atlas safety rules: The support prompt includes boundaries intended to keep conversations focused on college enrollment, provide appropriate guidance, and avoid unsupported promises about admissions or financial aid.

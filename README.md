@@ -33,10 +33,10 @@ MENTOR_EMAILS: Optional email address(es) for mentor access.
 MAIL_USERNAME: Optional email account for sending reminders.
 MAIL_PASSWORD: Optional email account password or app password.
 Keep .env private. Never commit API keys, OAuth secrets, or other credentials to GitHub. If email credentials are not configured, reminder emails are printed to the terminal instead.
-6. Start the application.
+5. Start the application.
 Run the app on port 5001 to match the Google OAuth redirect URI:
 PORT=5001 python run.py
-7. Open the application.
+6. Open the application.
 Navigate to http://localhost:5001 in your browser and sign in with Google.
 
 **Additional Notes**
@@ -82,7 +82,7 @@ What Claude Wrote or Helped Implement
 - Initial app framework: Claude wrote parts of the first Flask application version before October 4, 2026, including app setup and configuration, Google sign-in, the Atlas interview system, the developer API and access-key functionality, and initial versions of several templates and the stylesheet.
 - Atlas support prompt edits: Claude edited specific sections concerning AI transparency, FAFSA and family income, safety, and the current date. I wrote the rest of the support prompt.
 - Reminder feature: Claude wrote the staff route for sending due-soon reminders, the reminder button and confirmation message, two CSS rules, and a fix to the checklist link in `reminders.py`. The corresponding commit identifies Claude as a co-author.
-- Synthetic data set: Formed based on SAGE published summer melt research and findings from the School district of Philadelhpia. 100,000 simulated students created to train Model A and Model B
+- Synthetic data set: Formed based on SAGE published summer melt research and findings from the School District of Philadelphia. 100,000 simulated students created to train Model A and Model B
 
 What I Wrote
 

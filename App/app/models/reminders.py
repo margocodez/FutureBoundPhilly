@@ -2,7 +2,6 @@ from app.models.db import get_db
 import smtplib
 from collections import defaultdict
 from email.message import EmailMessage
-from flask import current_app
 from datetime import date
 from flask import current_app, url_for
 
@@ -62,9 +61,9 @@ class Reminder:
 
         for email, tasks in students.items():
             name = tasks[0]["student_name"] or ""
-
+            first_name=name.split()[0] if name.strip() else "there"
             task_lines = [
-                f"- {task['task_title']} (due {date.fromisoformat(task['due_date']).strftime("%b %d, %Y")})"
+                f"- {task['task_title']} (due {date.fromisoformat(task['due_date']).strftime('%b %d, %Y')})"
                 for task in tasks
             ]
 
@@ -72,7 +71,7 @@ class Reminder:
 
             subject = "Upcoming enrollment tasks"
             body = (
-                f"Hi {name.split(" ")[0]},\n\n"
+                f"Hi {first_name},\n\n"
                 "Here are your upcoming enrollment tasks:\n\n"
                 + "\n".join(task_lines)
                 + "\n\nLog in to FutureBound Philly to review your checklist "
@@ -100,8 +99,10 @@ class Reminder:
     @classmethod
     def _send_email(cls, to, subject, body):
         username = current_app.config.get("MAIL_USERNAME")
-
-        if not username:
+        mail_password = current_app.config.get(
+            "MAIL_PASSWORD"
+        )
+        if not username or not mail_password:
             print(
                 "\n--- EMAIL PREVIEW ---\n"
                 f"To: {to}\n"
@@ -122,9 +123,6 @@ class Reminder:
             )
             mail_port = int(
                 current_app.config.get("MAIL_PORT")
-            )
-            mail_password = current_app.config.get(
-                "MAIL_PASSWORD"
             )
             use_tls = current_app.config.get("MAIL_USE_TLS", True)
 

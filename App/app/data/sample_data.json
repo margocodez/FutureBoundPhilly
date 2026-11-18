@@ -1,0 +1,1776 @@
+{
+ "students": [
+  {
+   "google_sub": "sample-0",
+   "email": "jaylen.carter@example.com",
+   "name": "Jaylen Carter",
+   "stage": "deciding",
+   "interview": {
+    "status": "complete",
+    "messages": "[]",
+    "answers": "{\"accepted\": 1, \"accepted_offer\": 1, \"paid_deposit\": 0, \"starting_term\": \"unsure\", \"unsure_what_semester_start\": 1, \"living_on_campus\": \"no\", \"school_type\": \"4_year\", \"planned_enrollment_intensity\": 1, \"very_certain_attend_planned_college\": 0, \"submitted_fafsa_prior_to_graduation\": 0, \"cumulative_gpa\": 2.4, \"self_reported_attendance\": 0, \"passed_ap_ib_course\": 0, \"passed_ap_ib_exam\": 0, \"concurrent_cc_enrollment\": 0, \"registered_cc_prior_to_graduation\": 0, \"parent_education\": 0, \"ela_test_level\": \"below_basic\", \"ela_sbac_sd_units\": -1.0, \"math_test_level\": \"below_basic\", \"math_sbac_sd_units\": -1.0, \"college_name\": \"Temple University\"}",
+    "test_score_source": "student_estimate",
+    "model": "B",
+    "probability": 0.8382822871208191,
+    "risk_score": 84,
+    "risk_category": "red"
+   },
+   "tasks": [
+    {
+     "task_id": "compare_offers",
+     "title": "Compare your offers",
+     "stage": "deciding",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "review_award_letters",
+     "title": "Review financial aid award letters",
+     "stage": "deciding",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "visit_campuses",
+     "title": "Visit campuses or attend virtual info sessions",
+     "stage": "deciding",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "narrow_down_choice",
+     "title": "Narrow down to your final choice",
+     "stage": "deciding",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-25"
+    },
+    {
+     "task_id": "accept_offer",
+     "title": "Formally accept your admission offer",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "pay_deposit",
+     "title": "Pay your enrollment deposit",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "save_deposit_receipt",
+     "title": "Save your deposit confirmation receipt",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "decline_other_offers",
+     "title": "Decline your other offers",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_fafsa",
+     "title": "Submit the FAFSA",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_in_days": 0
+    },
+    {
+     "task_id": "review_sar",
+     "title": "Review your Student Aid Report (SAR)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-02-15"
+    },
+    {
+     "task_id": "submit_verification_docs",
+     "title": "Submit any financial aid verification documents",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "respond_to_award_letter",
+     "title": "Accept or decline each part of your aid award",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-15"
+    },
+    {
+     "task_id": "loan_entrance_counseling",
+     "title": "Complete loan entrance counseling",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "sign_mpn",
+     "title": "Sign the Master Promissory Note (MPN)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "meet_advisor",
+     "title": "Meet with an academic advisor",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-15"
+    },
+    {
+     "task_id": "register_for_classes",
+     "title": "Register for your first-semester classes",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "send_final_transcript",
+     "title": "Send your final high school transcript",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "pre_enrollment_advising",
+     "title": "Attend mandatory pre-enrollment advising",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "activate_student_email",
+     "title": "Set up your student email and portal account",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "register_for_orientation",
+     "title": "Register for and attend orientation",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "submit_health_records",
+     "title": "Submit immunization/health records",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "submit_waivers",
+     "title": "Submit required waivers or forms",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "pay_tuition_bill",
+     "title": "Pay your tuition bill",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "confirm_schedule",
+     "title": "Confirm your class schedule and locate your classes",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-15"
+    }
+   ],
+   "mentor_requests": [
+    {
+     "help_with": "Figuring out FAFSA and whether I can afford Temple",
+     "best_time": "Weekday evenings after 6",
+     "status": "assigned"
+    }
+   ],
+   "has_mentor": true
+  },
+  {
+   "google_sub": "sample-1",
+   "email": "aaliyah.brooks@example.com",
+   "name": "Aaliyah Brooks",
+   "stage": "committed",
+   "interview": {
+    "status": "complete",
+    "messages": "[]",
+    "answers": "{\"accepted\": 1, \"accepted_offer\": 1, \"paid_deposit\": 0, \"starting_term\": \"fall\", \"unsure_what_semester_start\": 0, \"living_on_campus\": \"no\", \"school_type\": \"2_year\", \"planned_enrollment_intensity\": 1, \"very_certain_attend_planned_college\": 0, \"submitted_fafsa_prior_to_graduation\": 0, \"cumulative_gpa\": 2.7, \"self_reported_attendance\": 0, \"passed_ap_ib_course\": 0, \"passed_ap_ib_exam\": 0, \"concurrent_cc_enrollment\": 0, \"registered_cc_prior_to_graduation\": 0, \"parent_education\": 1, \"ela_test_level\": \"basic\", \"ela_sbac_sd_units\": -0.35, \"math_test_level\": \"below_basic\", \"math_sbac_sd_units\": -1.0, \"college_name\": \"Community College of Philadelphia\"}",
+    "test_score_source": "student_estimate",
+    "model": "B",
+    "probability": 0.7280358076095581,
+    "risk_score": 73,
+    "risk_category": "red"
+   },
+   "tasks": [
+    {
+     "task_id": "compare_offers",
+     "title": "Compare your offers",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "review_award_letters",
+     "title": "Review financial aid award letters",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "visit_campuses",
+     "title": "Visit campuses or attend virtual info sessions",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "narrow_down_choice",
+     "title": "Narrow down to your final choice",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-25"
+    },
+    {
+     "task_id": "accept_offer",
+     "title": "Formally accept your admission offer",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "pay_deposit",
+     "title": "Pay your enrollment deposit",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "save_deposit_receipt",
+     "title": "Save your deposit confirmation receipt",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "decline_other_offers",
+     "title": "Decline your other offers",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_fafsa",
+     "title": "Submit the FAFSA",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_in_days": 1
+    },
+    {
+     "task_id": "review_sar",
+     "title": "Review your Student Aid Report (SAR)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-02-15"
+    },
+    {
+     "task_id": "submit_verification_docs",
+     "title": "Submit any financial aid verification documents",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "respond_to_award_letter",
+     "title": "Accept or decline each part of your aid award",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-15"
+    },
+    {
+     "task_id": "loan_entrance_counseling",
+     "title": "Complete loan entrance counseling",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "sign_mpn",
+     "title": "Sign the Master Promissory Note (MPN)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "placement_testing",
+     "title": "Complete placement testing",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "meet_advisor",
+     "title": "Meet with an academic advisor",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-15"
+    },
+    {
+     "task_id": "register_for_classes",
+     "title": "Register for your first-semester classes",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "send_final_transcript",
+     "title": "Send your final high school transcript",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "pre_enrollment_advising",
+     "title": "Attend mandatory pre-enrollment advising",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "activate_student_email",
+     "title": "Set up your student email and portal account",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "register_for_orientation",
+     "title": "Register for and attend orientation",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "submit_health_records",
+     "title": "Submit immunization/health records",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "submit_waivers",
+     "title": "Submit required waivers or forms",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "pay_tuition_bill",
+     "title": "Pay your tuition bill",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "confirm_schedule",
+     "title": "Confirm your class schedule and locate your classes",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-15"
+    }
+   ],
+   "mentor_requests": [
+    {
+     "help_with": "Registering for classes and placement tests",
+     "best_time": "Saturdays",
+     "status": "open"
+    }
+   ],
+   "has_mentor": false
+  },
+  {
+   "google_sub": "sample-2",
+   "email": "mateo.rivera@example.com",
+   "name": "Mateo Rivera",
+   "stage": "committed",
+   "interview": {
+    "status": "complete",
+    "messages": "[]",
+    "answers": "{\"accepted\": 1, \"accepted_offer\": 1, \"paid_deposit\": 0, \"starting_term\": \"fall\", \"unsure_what_semester_start\": 0, \"living_on_campus\": \"yes\", \"school_type\": \"4_year\", \"planned_enrollment_intensity\": 2, \"very_certain_attend_planned_college\": 1, \"submitted_fafsa_prior_to_graduation\": 0, \"cumulative_gpa\": 2.9, \"self_reported_attendance\": 1, \"passed_ap_ib_course\": 1, \"passed_ap_ib_exam\": 0, \"concurrent_cc_enrollment\": 0, \"registered_cc_prior_to_graduation\": 0, \"parent_education\": 1, \"ela_test_level\": \"basic\", \"ela_sbac_sd_units\": -0.35, \"math_test_level\": \"basic\", \"math_sbac_sd_units\": -0.35, \"college_name\": \"West Chester University\"}",
+    "test_score_source": "student_estimate",
+    "model": "B",
+    "probability": 0.5969363451004028,
+    "risk_score": 60,
+    "risk_category": "red"
+   },
+   "tasks": [
+    {
+     "task_id": "compare_offers",
+     "title": "Compare your offers",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "review_award_letters",
+     "title": "Review financial aid award letters",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "visit_campuses",
+     "title": "Visit campuses or attend virtual info sessions",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "narrow_down_choice",
+     "title": "Narrow down to your final choice",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-25"
+    },
+    {
+     "task_id": "accept_offer",
+     "title": "Formally accept your admission offer",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "pay_deposit",
+     "title": "Pay your enrollment deposit",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "save_deposit_receipt",
+     "title": "Save your deposit confirmation receipt",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "decline_other_offers",
+     "title": "Decline your other offers",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_fafsa",
+     "title": "Submit the FAFSA",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-02-01"
+    },
+    {
+     "task_id": "review_sar",
+     "title": "Review your Student Aid Report (SAR)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-02-15"
+    },
+    {
+     "task_id": "submit_verification_docs",
+     "title": "Submit any financial aid verification documents",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "respond_to_award_letter",
+     "title": "Accept or decline each part of your aid award",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-15"
+    },
+    {
+     "task_id": "loan_entrance_counseling",
+     "title": "Complete loan entrance counseling",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "sign_mpn",
+     "title": "Sign the Master Promissory Note (MPN)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "meet_advisor",
+     "title": "Meet with an academic advisor",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-15"
+    },
+    {
+     "task_id": "register_for_classes",
+     "title": "Register for your first-semester classes",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "send_final_transcript",
+     "title": "Send your final high school transcript",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "pre_enrollment_advising",
+     "title": "Attend mandatory pre-enrollment advising",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "activate_student_email",
+     "title": "Set up your student email and portal account",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "register_for_orientation",
+     "title": "Register for and attend orientation",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "submit_health_records",
+     "title": "Submit immunization/health records",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "apply_for_housing",
+     "title": "Apply for and confirm housing",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_waivers",
+     "title": "Submit required waivers or forms",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "pay_tuition_bill",
+     "title": "Pay your tuition bill",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "confirm_schedule",
+     "title": "Confirm your class schedule and locate your classes",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-15"
+    }
+   ],
+   "mentor_requests": [
+    {
+     "help_with": "Housing forms and what to bring",
+     "best_time": "After school",
+     "status": "assigned"
+    }
+   ],
+   "has_mentor": true
+  },
+  {
+   "google_sub": "sample-3",
+   "email": "nia.thompson@example.com",
+   "name": "Nia Thompson",
+   "stage": "financial_aid",
+   "interview": {
+    "status": "complete",
+    "messages": "[]",
+    "answers": "{\"accepted\": 1, \"accepted_offer\": 1, \"paid_deposit\": 0, \"starting_term\": \"fall\", \"unsure_what_semester_start\": 0, \"living_on_campus\": \"no\", \"school_type\": \"4_year\", \"planned_enrollment_intensity\": 2, \"very_certain_attend_planned_college\": 0, \"submitted_fafsa_prior_to_graduation\": 1, \"cumulative_gpa\": 3.1, \"self_reported_attendance\": 2, \"passed_ap_ib_course\": 1, \"passed_ap_ib_exam\": 0, \"concurrent_cc_enrollment\": 0, \"registered_cc_prior_to_graduation\": 0, \"parent_education\": 2, \"ela_test_level\": \"proficient\", \"ela_sbac_sd_units\": 0.35, \"math_test_level\": \"basic\", \"math_sbac_sd_units\": -0.35, \"college_name\": \"Penn State Abington\"}",
+    "test_score_source": "student_estimate",
+    "model": "B",
+    "probability": 0.4889732003211975,
+    "risk_score": 49,
+    "risk_category": "yellow"
+   },
+   "tasks": [
+    {
+     "task_id": "compare_offers",
+     "title": "Compare your offers",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "review_award_letters",
+     "title": "Review financial aid award letters",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "visit_campuses",
+     "title": "Visit campuses or attend virtual info sessions",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "narrow_down_choice",
+     "title": "Narrow down to your final choice",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-25"
+    },
+    {
+     "task_id": "accept_offer",
+     "title": "Formally accept your admission offer",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "pay_deposit",
+     "title": "Pay your enrollment deposit",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "save_deposit_receipt",
+     "title": "Save your deposit confirmation receipt",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "decline_other_offers",
+     "title": "Decline your other offers",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_fafsa",
+     "title": "Submit the FAFSA",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-02-01"
+    },
+    {
+     "task_id": "review_sar",
+     "title": "Review your Student Aid Report (SAR)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_in_days": 0
+    },
+    {
+     "task_id": "submit_verification_docs",
+     "title": "Submit any financial aid verification documents",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "respond_to_award_letter",
+     "title": "Accept or decline each part of your aid award",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-15"
+    },
+    {
+     "task_id": "loan_entrance_counseling",
+     "title": "Complete loan entrance counseling",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "sign_mpn",
+     "title": "Sign the Master Promissory Note (MPN)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "meet_advisor",
+     "title": "Meet with an academic advisor",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-15"
+    },
+    {
+     "task_id": "register_for_classes",
+     "title": "Register for your first-semester classes",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "send_final_transcript",
+     "title": "Send your final high school transcript",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "pre_enrollment_advising",
+     "title": "Attend mandatory pre-enrollment advising",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "activate_student_email",
+     "title": "Set up your student email and portal account",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "register_for_orientation",
+     "title": "Register for and attend orientation",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "submit_health_records",
+     "title": "Submit immunization/health records",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "submit_waivers",
+     "title": "Submit required waivers or forms",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "pay_tuition_bill",
+     "title": "Pay your tuition bill",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "confirm_schedule",
+     "title": "Confirm your class schedule and locate your classes",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-15"
+    }
+   ],
+   "mentor_requests": [],
+   "has_mentor": true
+  },
+  {
+   "google_sub": "sample-4",
+   "email": "kevin.nguyen@example.com",
+   "name": "Kevin Nguyen",
+   "stage": "financial_aid",
+   "interview": {
+    "status": "complete",
+    "messages": "[]",
+    "answers": "{\"accepted\": 1, \"accepted_offer\": 1, \"paid_deposit\": 0, \"starting_term\": \"fall\", \"unsure_what_semester_start\": 0, \"living_on_campus\": \"yes\", \"school_type\": \"4_year\", \"planned_enrollment_intensity\": 2, \"very_certain_attend_planned_college\": 1, \"submitted_fafsa_prior_to_graduation\": 1, \"cumulative_gpa\": 3.5, \"self_reported_attendance\": 2, \"passed_ap_ib_course\": 1, \"passed_ap_ib_exam\": 1, \"concurrent_cc_enrollment\": 0, \"registered_cc_prior_to_graduation\": 0, \"parent_education\": 3, \"ela_test_level\": \"proficient\", \"ela_sbac_sd_units\": 0.35, \"math_test_level\": \"advanced\", \"math_sbac_sd_units\": 1.1, \"college_name\": \"Drexel University\"}",
+    "test_score_source": "student_estimate",
+    "model": "B",
+    "probability": 0.40233370661735535,
+    "risk_score": 40,
+    "risk_category": "green"
+   },
+   "tasks": [
+    {
+     "task_id": "compare_offers",
+     "title": "Compare your offers",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "review_award_letters",
+     "title": "Review financial aid award letters",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "visit_campuses",
+     "title": "Visit campuses or attend virtual info sessions",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "narrow_down_choice",
+     "title": "Narrow down to your final choice",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-25"
+    },
+    {
+     "task_id": "accept_offer",
+     "title": "Formally accept your admission offer",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "pay_deposit",
+     "title": "Pay your enrollment deposit",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "save_deposit_receipt",
+     "title": "Save your deposit confirmation receipt",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "decline_other_offers",
+     "title": "Decline your other offers",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_fafsa",
+     "title": "Submit the FAFSA",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-02-01"
+    },
+    {
+     "task_id": "review_sar",
+     "title": "Review your Student Aid Report (SAR)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-02-15"
+    },
+    {
+     "task_id": "submit_verification_docs",
+     "title": "Submit any financial aid verification documents",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "respond_to_award_letter",
+     "title": "Accept or decline each part of your aid award",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-15"
+    },
+    {
+     "task_id": "loan_entrance_counseling",
+     "title": "Complete loan entrance counseling",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "sign_mpn",
+     "title": "Sign the Master Promissory Note (MPN)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "meet_advisor",
+     "title": "Meet with an academic advisor",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-15"
+    },
+    {
+     "task_id": "register_for_classes",
+     "title": "Register for your first-semester classes",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "send_final_transcript",
+     "title": "Send your final high school transcript",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "pre_enrollment_advising",
+     "title": "Attend mandatory pre-enrollment advising",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "activate_student_email",
+     "title": "Set up your student email and portal account",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "register_for_orientation",
+     "title": "Register for and attend orientation",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "submit_health_records",
+     "title": "Submit immunization/health records",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "apply_for_housing",
+     "title": "Apply for and confirm housing",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_waivers",
+     "title": "Submit required waivers or forms",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "pay_tuition_bill",
+     "title": "Pay your tuition bill",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "confirm_schedule",
+     "title": "Confirm your class schedule and locate your classes",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-15"
+    }
+   ],
+   "mentor_requests": [],
+   "has_mentor": false
+  },
+  {
+   "google_sub": "sample-5",
+   "email": "destiny.williams@example.com",
+   "name": "Destiny Williams",
+   "stage": "committed",
+   "interview": {
+    "status": "complete",
+    "messages": "[]",
+    "answers": "{\"accepted\": 1, \"accepted_offer\": 1, \"paid_deposit\": 0, \"starting_term\": \"unsure\", \"unsure_what_semester_start\": 1, \"living_on_campus\": \"yes\", \"school_type\": \"4_year\", \"planned_enrollment_intensity\": 2, \"very_certain_attend_planned_college\": 0, \"submitted_fafsa_prior_to_graduation\": 0, \"cumulative_gpa\": 3.0, \"self_reported_attendance\": 0, \"passed_ap_ib_course\": 1, \"passed_ap_ib_exam\": 0, \"concurrent_cc_enrollment\": 0, \"registered_cc_prior_to_graduation\": 0, \"parent_education\": 1, \"ela_test_level\": \"basic\", \"ela_sbac_sd_units\": -0.35, \"math_test_level\": \"basic\", \"math_sbac_sd_units\": -0.35, \"college_name\": \"Lincoln University\"}",
+    "test_score_source": "student_estimate",
+    "model": "B",
+    "probability": 0.8199912309646606,
+    "risk_score": 82,
+    "risk_category": "red"
+   },
+   "tasks": [
+    {
+     "task_id": "compare_offers",
+     "title": "Compare your offers",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "review_award_letters",
+     "title": "Review financial aid award letters",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "visit_campuses",
+     "title": "Visit campuses or attend virtual info sessions",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "narrow_down_choice",
+     "title": "Narrow down to your final choice",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-25"
+    },
+    {
+     "task_id": "accept_offer",
+     "title": "Formally accept your admission offer",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "pay_deposit",
+     "title": "Pay your enrollment deposit",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "save_deposit_receipt",
+     "title": "Save your deposit confirmation receipt",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "decline_other_offers",
+     "title": "Decline your other offers",
+     "stage": "committed",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_fafsa",
+     "title": "Submit the FAFSA",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-02-01"
+    },
+    {
+     "task_id": "review_sar",
+     "title": "Review your Student Aid Report (SAR)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-02-15"
+    },
+    {
+     "task_id": "submit_verification_docs",
+     "title": "Submit any financial aid verification documents",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "respond_to_award_letter",
+     "title": "Accept or decline each part of your aid award",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-04-15"
+    },
+    {
+     "task_id": "loan_entrance_counseling",
+     "title": "Complete loan entrance counseling",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "sign_mpn",
+     "title": "Sign the Master Promissory Note (MPN)",
+     "stage": "financial_aid",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "meet_advisor",
+     "title": "Meet with an academic advisor",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-15"
+    },
+    {
+     "task_id": "register_for_classes",
+     "title": "Register for your first-semester classes",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "send_final_transcript",
+     "title": "Send your final high school transcript",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "pre_enrollment_advising",
+     "title": "Attend mandatory pre-enrollment advising",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "activate_student_email",
+     "title": "Set up your student email and portal account",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "register_for_orientation",
+     "title": "Register for and attend orientation",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "submit_health_records",
+     "title": "Submit immunization/health records",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "apply_for_housing",
+     "title": "Apply for and confirm housing",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_waivers",
+     "title": "Submit required waivers or forms",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "pay_tuition_bill",
+     "title": "Pay your tuition bill",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "confirm_schedule",
+     "title": "Confirm your class schedule and locate your classes",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-15"
+    }
+   ],
+   "mentor_requests": [
+    {
+     "help_with": "Understanding my financial aid award letter",
+     "best_time": "Weekends",
+     "status": "open"
+    }
+   ],
+   "has_mentor": false
+  },
+  {
+   "google_sub": "sample-6",
+   "email": "omar.hassan@example.com",
+   "name": "Omar Hassan",
+   "stage": "registered",
+   "interview": {
+    "status": "complete",
+    "messages": "[]",
+    "answers": "{\"accepted\": 1, \"accepted_offer\": 1, \"paid_deposit\": 0, \"starting_term\": \"fall\", \"unsure_what_semester_start\": 0, \"living_on_campus\": \"no\", \"school_type\": \"4_year\", \"planned_enrollment_intensity\": 2, \"very_certain_attend_planned_college\": 1, \"submitted_fafsa_prior_to_graduation\": 1, \"cumulative_gpa\": 3.8, \"self_reported_attendance\": 2, \"passed_ap_ib_course\": 1, \"passed_ap_ib_exam\": 1, \"concurrent_cc_enrollment\": 0, \"registered_cc_prior_to_graduation\": 0, \"parent_education\": 3, \"ela_test_level\": \"advanced\", \"ela_sbac_sd_units\": 1.1, \"math_test_level\": \"advanced\", \"math_sbac_sd_units\": 1.1, \"college_name\": \"Temple University\"}",
+    "test_score_source": "student_estimate",
+    "model": "B",
+    "probability": 0.4057076573371887,
+    "risk_score": 41,
+    "risk_category": "green"
+   },
+   "tasks": [
+    {
+     "task_id": "compare_offers",
+     "title": "Compare your offers",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "review_award_letters",
+     "title": "Review financial aid award letters",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "visit_campuses",
+     "title": "Visit campuses or attend virtual info sessions",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "narrow_down_choice",
+     "title": "Narrow down to your final choice",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-25"
+    },
+    {
+     "task_id": "accept_offer",
+     "title": "Formally accept your admission offer",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "pay_deposit",
+     "title": "Pay your enrollment deposit",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "save_deposit_receipt",
+     "title": "Save your deposit confirmation receipt",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "decline_other_offers",
+     "title": "Decline your other offers",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_fafsa",
+     "title": "Submit the FAFSA",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-02-01"
+    },
+    {
+     "task_id": "review_sar",
+     "title": "Review your Student Aid Report (SAR)",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-02-15"
+    },
+    {
+     "task_id": "submit_verification_docs",
+     "title": "Submit any financial aid verification documents",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "respond_to_award_letter",
+     "title": "Accept or decline each part of your aid award",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-15"
+    },
+    {
+     "task_id": "loan_entrance_counseling",
+     "title": "Complete loan entrance counseling",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "sign_mpn",
+     "title": "Sign the Master Promissory Note (MPN)",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "meet_advisor",
+     "title": "Meet with an academic advisor",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-15"
+    },
+    {
+     "task_id": "register_for_classes",
+     "title": "Register for your first-semester classes",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "send_final_transcript",
+     "title": "Send your final high school transcript",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "pre_enrollment_advising",
+     "title": "Attend mandatory pre-enrollment advising",
+     "stage": "registered",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "activate_student_email",
+     "title": "Set up your student email and portal account",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "register_for_orientation",
+     "title": "Register for and attend orientation",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "submit_health_records",
+     "title": "Submit immunization/health records",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "submit_waivers",
+     "title": "Submit required waivers or forms",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "pay_tuition_bill",
+     "title": "Pay your tuition bill",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "confirm_schedule",
+     "title": "Confirm your class schedule and locate your classes",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-15"
+    }
+   ],
+   "mentor_requests": [],
+   "has_mentor": false
+  },
+  {
+   "google_sub": "sample-7",
+   "email": "sofia.martinez@example.com",
+   "name": "Sofia Martinez",
+   "stage": "ready",
+   "interview": {
+    "status": "complete",
+    "messages": "[]",
+    "answers": "{\"accepted\": 1, \"accepted_offer\": 1, \"paid_deposit\": 1, \"starting_term\": \"fall\", \"unsure_what_semester_start\": 0, \"living_on_campus\": \"no\", \"school_type\": \"4_year\", \"planned_enrollment_intensity\": 2, \"very_certain_attend_planned_college\": 1, \"submitted_fafsa_prior_to_graduation\": 1, \"cumulative_gpa\": 3.6, \"self_reported_attendance\": 2, \"passed_ap_ib_course\": 1, \"passed_ap_ib_exam\": 1, \"concurrent_cc_enrollment\": 0, \"registered_cc_prior_to_graduation\": 0, \"parent_education\": 4, \"ela_test_level\": \"advanced\", \"ela_sbac_sd_units\": 1.1, \"math_test_level\": \"proficient\", \"math_sbac_sd_units\": 0.35, \"college_name\": \"La Salle University\"}",
+    "test_score_source": "student_estimate",
+    "model": "B",
+    "probability": 0.4138093888759613,
+    "risk_score": 41,
+    "risk_category": "green"
+   },
+   "tasks": [
+    {
+     "task_id": "compare_offers",
+     "title": "Compare your offers",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "review_award_letters",
+     "title": "Review financial aid award letters",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-03-15"
+    },
+    {
+     "task_id": "visit_campuses",
+     "title": "Visit campuses or attend virtual info sessions",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "narrow_down_choice",
+     "title": "Narrow down to your final choice",
+     "stage": "deciding",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-25"
+    },
+    {
+     "task_id": "accept_offer",
+     "title": "Formally accept your admission offer",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "pay_deposit",
+     "title": "Pay your enrollment deposit",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "save_deposit_receipt",
+     "title": "Save your deposit confirmation receipt",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "decline_other_offers",
+     "title": "Decline your other offers",
+     "stage": "committed",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-05-01"
+    },
+    {
+     "task_id": "submit_fafsa",
+     "title": "Submit the FAFSA",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-02-01"
+    },
+    {
+     "task_id": "review_sar",
+     "title": "Review your Student Aid Report (SAR)",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-02-15"
+    },
+    {
+     "task_id": "submit_verification_docs",
+     "title": "Submit any financial aid verification documents",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-01"
+    },
+    {
+     "task_id": "respond_to_award_letter",
+     "title": "Accept or decline each part of your aid award",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-04-15"
+    },
+    {
+     "task_id": "loan_entrance_counseling",
+     "title": "Complete loan entrance counseling",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "sign_mpn",
+     "title": "Sign the Master Promissory Note (MPN)",
+     "stage": "financial_aid",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "meet_advisor",
+     "title": "Meet with an academic advisor",
+     "stage": "registered",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-06-15"
+    },
+    {
+     "task_id": "register_for_classes",
+     "title": "Register for your first-semester classes",
+     "stage": "registered",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "send_final_transcript",
+     "title": "Send your final high school transcript",
+     "stage": "registered",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "pre_enrollment_advising",
+     "title": "Attend mandatory pre-enrollment advising",
+     "stage": "registered",
+     "status": "done",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "activate_student_email",
+     "title": "Set up your student email and portal account",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-06-01"
+    },
+    {
+     "task_id": "register_for_orientation",
+     "title": "Register for and attend orientation",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-01"
+    },
+    {
+     "task_id": "submit_health_records",
+     "title": "Submit immunization/health records",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-07-15"
+    },
+    {
+     "task_id": "submit_waivers",
+     "title": "Submit required waivers or forms",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "pay_tuition_bill",
+     "title": "Pay your tuition bill",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-01"
+    },
+    {
+     "task_id": "confirm_schedule",
+     "title": "Confirm your class schedule and locate your classes",
+     "stage": "ready",
+     "status": "todo",
+     "source": "template",
+     "due_date": "2027-08-15"
+    }
+   ],
+   "mentor_requests": [],
+   "has_mentor": false
+  },
+  {
+   "google_sub": "sample-8",
+   "email": "tyrese.jackson@example.com",
+   "name": "Tyrese Jackson",
+   "stage": null,
+   "interview": null,
+   "tasks": [],
+   "mentor_requests": [],
+   "has_mentor": false
+  },
+  {
+   "google_sub": "sample-9",
+   "email": "imani.davis@example.com",
+   "name": "Imani Davis",
+   "stage": null,
+   "interview": null,
+   "tasks": [],
+   "mentor_requests": [],
+   "has_mentor": false
+  }
+ ]
+}

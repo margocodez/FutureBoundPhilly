@@ -1,0 +1,37 @@
+# Render Blueprint for the hosted demo of FutureBound Philly.
+# In Render: New > Blueprint > pick this repo. It reads this file and asks for the secrets below.
+services:
+  - type: web
+    name: futureboundphilly
+    runtime: python
+    plan: free
+    branch: deploy
+    rootDir: App
+    # The CPU-only build of PyTorch is about a tenth of the size of the default one.
+    buildCommand: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -r requirements.txt
+    # One worker keeps memory under the free plan's 512 MB; threads let Atlas replies run side by side.
+    startCommand: gunicorn run:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.6
+      - key: BEHIND_PROXY
+        value: "1"
+      - key: SEED_SAMPLE_DATA
+        value: "1"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: STAFF_EMAILS
+        sync: false
+      - key: MENTOR_EMAILS
+        sync: false
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false

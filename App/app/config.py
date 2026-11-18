@@ -23,6 +23,11 @@ class Config:
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = "Lax"
 
+    # Hosting settings: all off by default, so running locally works as before.
+    BEHIND_PROXY = os.environ.get("BEHIND_PROXY") == "1"
+    SESSION_COOKIE_SECURE = BEHIND_PROXY  # only send the login cookie over HTTPS
+    SEED_SAMPLE_DATA = os.environ.get("SEED_SAMPLE_DATA") == "1"
+
     ATLAS_DAILY_MESSAGE_CAP = 50
     REMINDER_DAYS_AHEAD = 3
 

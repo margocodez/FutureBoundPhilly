@@ -1,4 +1,5 @@
 from flask import Flask
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 from app.config import Config
 from app.extensions import oauth
@@ -13,6 +14,12 @@ def create_app(config_class=Config):
         static_folder="views/static",
     )
     app.config.from_object(config_class)
+
+    # The host serves the site over HTTPS and forwards requests to Flask as plain HTTP.
+    # Trust its X-Forwarded headers so url_for(..., _external=True) builds https:// links,
+    # which Google sign-in requires.
+    if app.config["BEHIND_PROXY"]:
+        app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 
     @app.template_filter("nice_date")
     def nice_date(value):
@@ -44,5 +51,9 @@ def create_app(config_class=Config):
     app.register_blueprint(atlas_bp)
     app.register_blueprint(staff_bp)
     app.register_blueprint(mentor_bp)
+
+    if app.config["SEED_SAMPLE_DATA"]:
+        from app.models.sample_data import seed_sample_data
+        seed_sample_data(app)
 
     return app

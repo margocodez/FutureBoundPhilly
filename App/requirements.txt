@@ -7,3 +7,4 @@ torch
 pandas
 scikit-learn==1.7.2  # must match the version used to pickle the scalers
 joblib
+gunicorn

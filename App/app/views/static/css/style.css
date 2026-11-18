@@ -613,6 +613,15 @@ pre { background: var(--muted); padding: 1rem; border-radius: 6px; overflow-x: a
     text-align: center;
 }
 
+/* Footer on every page */
+.site-footer {
+    margin: 2rem auto 1.5rem;
+    padding: 0 1rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
 /* Mobile home page */
 @media (max-width: 600px) {
     .hero {
